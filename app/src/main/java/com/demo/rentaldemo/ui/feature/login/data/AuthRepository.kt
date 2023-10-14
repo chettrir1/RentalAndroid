@@ -5,6 +5,8 @@ interface AuthRepository {
     }
 
     interface Remote {
+
     }
 
+    suspend fun getData():String
 }
