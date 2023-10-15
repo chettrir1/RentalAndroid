@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.RentalDemo" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.RentalDemo" parent="Theme.AppCompat.Light.NoActionBar" />
 
     <style name="button_style_accent">
         <item name="android:background">@drawable/bg_button_selector</item>

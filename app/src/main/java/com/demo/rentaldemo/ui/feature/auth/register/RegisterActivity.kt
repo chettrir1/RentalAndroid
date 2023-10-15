@@ -5,27 +5,27 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.demo.rentaldemo.R
-import com.demo.rentaldemo.databinding.ActivityLoginBinding
+import com.demo.rentaldemo.databinding.ActivityRegisterBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
 
-class RegisterActivity : BaseActivity<ActivityLoginBinding>() {
+class RegisterActivity : BaseActivity<ActivityRegisterBinding>() {
 
     private val viewModel: RegisterViewModel by viewModels()
 
     companion object {
         fun start(activity: Activity) {
             val intent = Intent(activity, RegisterActivity::class.java)
-            intent.flags =
-                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             activity.startActivity(intent)
-            activity.finish()
         }
     }
 
-    override fun layout() = R.layout.activity_login
+    override fun layout() = R.layout.activity_register
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding.tvBackToLogin.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     override fun initObservers() {

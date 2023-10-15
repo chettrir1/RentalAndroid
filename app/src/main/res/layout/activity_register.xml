@@ -21,7 +21,7 @@
                 android:id="@+id/logo"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:padding="@dimen/spacing_72"
+                android:padding="@dimen/spacing_56"
                 android:src="@drawable/logo"
                 app:layout_constraintDimensionRatio="w,1:2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -81,8 +81,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="John"
                     android:inputType="textPersonName"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,8 +124,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="Doe"
                     android:inputType="textPersonName"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -167,8 +165,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="example@gmail.com"
                     android:inputType="textEmailAddress"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -209,8 +206,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="example@gmail.com"
                     android:inputType="number"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -253,8 +249,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="xxxxxxxxxx"
                     android:inputType="textPassword"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -297,8 +292,7 @@
                     android:drawablePadding="@dimen/spacing_8"
                     android:hint="xxxxxxxxxx"
                     android:inputType="textPassword"
-                    android:nextFocusDown="@+id/btn_sign_in"
-                    app:setViewEnabled="true" />
+                    android:nextFocusDown="@+id/btn_sign_in" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -316,15 +310,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/til_confirm_password" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_dont_have_account"
+                android:id="@+id/tv_back_to_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_16"
                 android:layout_marginEnd="@dimen/text_size_24"
-                app:layout_constraintVertical_bias="1.0"
+                android:padding="@dimen/spacing_8"
                 android:layout_marginBottom="@dimen/spacing_24"
                 android:fontFamily="@font/sansf_bold"
-                android:text="@string/don_t_have_an_account"
+                android:text="@string/back_to_login"
                 android:textAllCaps="false"
                 android:textColor="@color/colorMain"
                 android:textSize="@dimen/text_size_14"
@@ -332,7 +326,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/btn_login"
                 app:layout_constraintStart_toStartOf="@+id/btn_login"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

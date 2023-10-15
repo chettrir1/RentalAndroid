@@ -14,7 +14,7 @@
         android:theme="@style/Theme.RentalDemo"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.feature.auth.login.LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RentalDemo">
@@ -24,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.feature.auth.register.RegisterActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

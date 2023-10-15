@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.ActivityLoginBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
+import com.demo.rentaldemo.ui.feature.auth.register.RegisterActivity
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
@@ -26,6 +27,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding.btnCreateAccount.setOnClickListener {
+            RegisterActivity.start(this)
+        }
     }
 
     override fun initObservers() {
