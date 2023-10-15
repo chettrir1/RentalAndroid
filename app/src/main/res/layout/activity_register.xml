@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"
                 android:textColor="@color/colorAccent"
-                android:textSize="@dimen/text_size_48"
+                android:textSize="@dimen/text_size_36"
                 android:textStyle="bold"
                 app:fontFamily="@font/sansf_bold"
                 app:layout_constraintBottom_toBottomOf="@+id/logo"

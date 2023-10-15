@@ -57,6 +57,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="spacing_104">104dp</dimen>
     <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_36">36sp</dimen>
     <dimen name="text_size_48">48sp</dimen>
     <dimen name="spacing_90">90dp</dimen>
     <dimen name="banner_height">134dp</dimen>

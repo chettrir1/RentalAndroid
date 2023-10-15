@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.ActivityLoginBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
+import com.demo.rentaldemo.ui.feature.auth.forgotpassword.VerifyEmailActivity
 import com.demo.rentaldemo.ui.feature.auth.register.RegisterActivity
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
@@ -27,6 +28,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding.tvForgotPassword.setOnClickListener {
+            VerifyEmailActivity.start(this)
+        }
+
         binding.btnCreateAccount.setOnClickListener {
             RegisterActivity.start(this)
         }
