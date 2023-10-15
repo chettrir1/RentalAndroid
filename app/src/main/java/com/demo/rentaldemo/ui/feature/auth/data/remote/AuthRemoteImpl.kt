@@ -1,6 +1,6 @@
-package com.demo.rentaldemo.ui.feature.login.data.remote
+package com.demo.rentaldemo.ui.feature.auth.data.remote
 
-import com.demo.rentaldemo.ui.feature.login.data.AuthRepository
+import com.demo.rentaldemo.ui.feature.auth.data.AuthRepository
 import com.demo.rentaldemo.ui.remote.ApiService
 
 class AuthRemoteImpl private constructor() : AuthRepository.Remote {

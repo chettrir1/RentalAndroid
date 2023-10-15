@@ -1,6 +1,6 @@
-package com.demo.rentaldemo.ui.feature.login.data.local
+package com.demo.rentaldemo.ui.feature.auth.data.local
 
-import com.demo.rentaldemo.ui.feature.login.data.AuthRepository
+import com.demo.rentaldemo.ui.feature.auth.data.AuthRepository
 
 class AuthLocalImpl private constructor() : AuthRepository.Local {
 

@@ -1,10 +1,10 @@
-package com.demo.rentaldemo.ui.feature.login
+package com.demo.rentaldemo.ui.feature.auth.login
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.demo.rentaldemo.ui.feature.login.data.AuthRepositoryImpl
+import com.demo.rentaldemo.ui.feature.auth.data.AuthRepositoryImpl
 import kotlinx.coroutines.cancel
 
 class LoginViewModel : ViewModel(),

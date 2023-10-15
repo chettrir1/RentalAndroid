@@ -1,4 +1,4 @@
-package com.demo.rentaldemo.ui.feature.login.data
+package com.demo.rentaldemo.ui.feature.auth.data
 
 interface AuthRepository {
     interface Local {

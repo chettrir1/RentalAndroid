@@ -1,7 +1,7 @@
-package com.demo.rentaldemo.ui.feature.login.data
+package com.demo.rentaldemo.ui.feature.auth.data
 
-import com.demo.rentaldemo.ui.feature.login.data.local.AuthLocalImpl
-import com.demo.rentaldemo.ui.feature.login.data.remote.AuthRemoteImpl
+import com.demo.rentaldemo.ui.feature.auth.data.local.AuthLocalImpl
+import com.demo.rentaldemo.ui.feature.auth.data.remote.AuthRemoteImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

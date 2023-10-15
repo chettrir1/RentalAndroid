@@ -1,4 +1,4 @@
-package com.demo.rentaldemo.ui.feature.login
+package com.demo.rentaldemo.ui.feature.auth.login
 
 import android.app.Activity
 import android.content.Intent
