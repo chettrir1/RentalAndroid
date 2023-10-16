@@ -46,7 +46,7 @@
                 android:id="@+id/tv_first_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginTop="@dimen/spacing_32"
                 android:fontFamily="@font/sansf_bold"
                 android:paddingStart="@dimen/spacing_24"
                 android:paddingEnd="@dimen/spacing_8"
@@ -239,7 +239,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_password"
                 app:passwordToggleDrawable="@drawable/password_selector"
-                app:passwordToggleEnabled="false">
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -282,7 +282,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_confirm_password"
                 app:passwordToggleDrawable="@drawable/password_selector"
-                app:passwordToggleEnabled="false">
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_confirm_password"
