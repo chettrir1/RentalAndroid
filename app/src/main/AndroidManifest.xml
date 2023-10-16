@@ -32,6 +32,10 @@
         <activity
             android:name=".ui.feature.auth.forgotpassword.VerifyEmailActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".ui.feature.auth.forgotpassword.ResetPasswordActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
