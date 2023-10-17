@@ -1,10 +1,9 @@
-package com.demo.rentaldemo.ui.feature.auth.data.remote
+package com.demo.rentaldemo.ui.feature.main.data.remote
 
-import com.demo.rentaldemo.ui.feature.auth.data.AuthRepository
 import com.demo.rentaldemo.ui.feature.main.data.MainRepository
 import com.demo.rentaldemo.ui.remote.ApiService
 
-class AuthRemoteImpl private constructor() : AuthRepository.Remote {
+class MainRemoteImpl private constructor() : MainRepository.Remote {
 
     private val apiService by lazy {
         ApiService.getInstance()
@@ -12,14 +11,14 @@ class AuthRemoteImpl private constructor() : AuthRepository.Remote {
 
     companion object {
         @Volatile
-        private var instance: AuthRepository.Remote? = null
+        private var instance: MainRepository.Remote? = null
 
         @Synchronized
-        fun getInstance(): AuthRepository.Remote {
+        fun getInstance(): MainRepository.Remote {
             if (instance != null) {
                 return instance!!
             }
-            return AuthRemoteImpl().also { instance = it }
+            return MainRemoteImpl().also { instance = it }
         }
     }
 
