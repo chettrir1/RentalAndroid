@@ -11,8 +11,8 @@
         android:id="@+id/cv_recently_updated"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipToPadding="false"
         android:layout_marginBottom="@dimen/spacing_12"
+        android:clipToPadding="false"
         app:cardCornerRadius="@dimen/spacing_16"
         app:cardElevation="0dp"
         app:cardUseCompatPadding="false">
@@ -54,25 +54,36 @@
                 android:layout_marginBottom="@dimen/spacing_8"
                 android:fontFamily="@font/sansf_regular"
                 android:text="Owen street, Barrie"
-                android:textSize="@dimen/text_size_12"
                 android:textColor="@color/grey_808080"
+                android:textSize="@dimen/text_size_12"
                 app:layout_constraintEnd_toEndOf="@id/tv_title"
                 app:layout_constraintStart_toStartOf="@+id/tv_title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bed"
+                android:layout_width="@dimen/spacing_12"
+                android:layout_height="@dimen/spacing_12"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_room_count"
+                app:layout_constraintStart_toStartOf="@+id/tv_address"
+                app:layout_constraintTop_toTopOf="@+id/tv_room_count"
+                app:srcCompat="@drawable/ic_bed"
+                app:tint="@color/grey_808080" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_room_count"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
                 android:layout_marginTop="@dimen/spacing_4"
                 android:layout_marginBottom="@dimen/spacing_8"
                 android:fontFamily="@font/sansf_regular"
-                tools:text="2 rooms"
                 android:textColor="@color/grey_808080"
                 android:textSize="@dimen/text_size_12"
                 app:layout_constraintEnd_toEndOf="@id/tv_address"
-                app:layout_constraintStart_toStartOf="@+id/tv_address"
-                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+                app:layout_constraintStart_toEndOf="@+id/iv_bed"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address"
+                tools:text="2 rooms" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_price"
@@ -81,11 +92,11 @@
                 android:layout_marginTop="@dimen/spacing_4"
                 android:layout_marginBottom="@dimen/spacing_16"
                 android:fontFamily="@font/sansf_bold"
-                tools:text="$2400"
                 android:textColor="@color/black_444444"
                 android:textSize="@dimen/text_size_20"
                 app:layout_constraintStart_toStartOf="@+id/tv_address"
-                app:layout_constraintTop_toBottomOf="@+id/tv_room_count" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_count"
+                tools:text="$2400" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_per"
@@ -94,12 +105,12 @@
                 android:layout_marginStart="@dimen/spacing_4"
                 android:fontFamily="@font/sansf_regular"
                 android:gravity="center"
-                tools:text="/ month"
                 android:textColor="@color/grey_808080"
                 android:textSize="@dimen/text_size_12"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_price"
                 app:layout_constraintStart_toEndOf="@+id/tv_price"
-                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+                app:layout_constraintTop_toTopOf="@+id/tv_price"
+                tools:text="/ month" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_status"
@@ -111,13 +122,13 @@
                 android:paddingTop="@dimen/spacing_2"
                 android:paddingEnd="@dimen/spacing_8"
                 android:paddingBottom="@dimen/spacing_2"
-                tools:text="Available"
                 android:textSize="@dimen/text_size_8"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+                app:layout_constraintTop_toTopOf="@+id/tv_title"
+                tools:text="Available" />
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageView"
+                android:id="@+id/iv_favourite"
                 android:layout_width="@dimen/spacing_20"
                 android:layout_height="@dimen/spacing_20"
                 android:layout_marginBottom="@dimen/spacing_16"
