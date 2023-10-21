@@ -21,4 +21,13 @@
     <string name="confirm">Confirm</string>
     <string name="create_new_password">Create New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
+    <string name="search_address_city_location">Search address, city, location</string>
+    <string name="categories">Categories</string>
+    <string name="see_more">See More</string>
+    <string name="recently_updated">Recently Updated</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
 </resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_recently_updated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_marginBottom="@dimen/spacing_12"
+        app:cardCornerRadius="@dimen/spacing_16"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_recently_updated"
+                android:layout_width="140dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_8"
+                android:layout_marginTop="@dimen/spacing_16"
+                android:layout_marginEnd="@dimen/spacing_8"
+                android:fontFamily="@font/sansf_regular"
+                android:text="Small nature Friendly house"
+                android:textColor="@color/black_444444"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintEnd_toStartOf="@+id/tv_status"
+                app:layout_constraintStart_toEndOf="@+id/iv_recently_updated"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:layout_marginBottom="@dimen/spacing_8"
+                android:fontFamily="@font/sansf_regular"
+                android:text="Owen street, Barrie"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/grey_808080"
+                app:layout_constraintEnd_toEndOf="@id/tv_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_room_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:layout_marginBottom="@dimen/spacing_8"
+                android:fontFamily="@font/sansf_regular"
+                tools:text="2 rooms"
+                android:textColor="@color/grey_808080"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintEnd_toEndOf="@id/tv_address"
+                app:layout_constraintStart_toStartOf="@+id/tv_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:layout_marginBottom="@dimen/spacing_16"
+                android:fontFamily="@font/sansf_bold"
+                tools:text="$2400"
+                android:textColor="@color/black_444444"
+                android:textSize="@dimen/text_size_20"
+                app:layout_constraintStart_toStartOf="@+id/tv_address"
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_count" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_per"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_4"
+                android:fontFamily="@font/sansf_regular"
+                android:gravity="center"
+                tools:text="/ month"
+                android:textColor="@color/grey_808080"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                app:layout_constraintStart_toEndOf="@+id/tv_price"
+                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_16"
+                android:background="@drawable/bg_red"
+                android:paddingStart="@dimen/spacing_8"
+                android:paddingTop="@dimen/spacing_2"
+                android:paddingEnd="@dimen/spacing_8"
+                android:paddingBottom="@dimen/spacing_2"
+                tools:text="Available"
+                android:textSize="@dimen/text_size_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_status"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price"
+                app:srcCompat="@drawable/ic_bell" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

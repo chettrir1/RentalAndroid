@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,6 +36,10 @@
 
         <activity
             android:name=".ui.feature.auth.forgotpassword.ResetPasswordActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.feature.main.landing.MainActivity"
             android:exported="true" />
     </application>
 

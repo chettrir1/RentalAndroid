@@ -9,6 +9,7 @@ import com.demo.rentaldemo.databinding.ActivityLoginBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
 import com.demo.rentaldemo.ui.feature.auth.forgotpassword.VerifyEmailActivity
 import com.demo.rentaldemo.ui.feature.auth.register.RegisterActivity
+import com.demo.rentaldemo.ui.feature.main.landing.MainActivity
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
@@ -30,6 +31,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         super.onCreate(savedInstanceState)
         binding.tvForgotPassword.setOnClickListener {
             VerifyEmailActivity.start(this)
+        }
+
+        binding.btnLogin.setOnClickListener {
+            MainActivity.start(this)
         }
 
         binding.btnCreateAccount.setOnClickListener {

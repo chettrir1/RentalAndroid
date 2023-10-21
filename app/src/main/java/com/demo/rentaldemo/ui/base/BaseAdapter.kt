@@ -6,13 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * Recyclerview adapter using paging arch component
- *
- * @param T entity model
- * @param VH ViewHolder class
- */
-abstract class BaseAdapter<T, VH : BaseViewHolder> : RecyclerView.Adapter<VH>() {
+abstract class BaseAdapter<T, VH : BaseViewHolder<T>> : RecyclerView.Adapter<VH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val layoutInflater = LayoutInflater.from(parent.context)
