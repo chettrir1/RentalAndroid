@@ -43,7 +43,7 @@ class RecentlyUpdatedAdapter(
             Glide.with(binding.root.context)
                 .load(obj.image)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.logo).into(binding.ivRecentlyUpdated)
+                .placeholder(R.drawable.ic_logo).into(binding.ivRecentlyUpdated)
 
             binding.tvPer.text = "/ ${obj.price_type}"
             binding.tvAddress.text = obj.address
