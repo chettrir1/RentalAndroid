@@ -1,5 +1,6 @@
 package com.demo.rentaldemo.ui.feature.main.landing
 
+import androidx.core.content.ContextCompat
 import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -49,6 +50,29 @@ class RecentlyUpdatedAdapter(
             binding.tvRoomCount.text = "${obj.roomCount} room"
             binding.tvPrice.text = "${obj.currency_code}${obj.price}"
             binding.tvStatus.text = obj.status
+            if (obj.status == "Available") {
+                binding.tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        binding.tvStatus.context,
+                        R.color.colorAccent
+                    )
+                )
+                binding.tvStatus.background = ContextCompat.getDrawable(
+                    binding.tvStatus.context,
+                    R.drawable.bg_red
+                )
+            } else {
+                binding.tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        binding.tvStatus.context,
+                        R.color.colorMain
+                    )
+                )
+                binding.tvStatus.background = ContextCompat.getDrawable(
+                    binding.tvStatus.context,
+                    R.drawable.bg_green
+                )
+            }
 
 
             binding.cvRecentlyUpdated.setOnClickListener {
