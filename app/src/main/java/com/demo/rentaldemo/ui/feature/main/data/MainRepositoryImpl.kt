@@ -2,6 +2,7 @@ package com.demo.rentaldemo.ui.feature.main.data
 
 import com.demo.rentaldemo.ui.feature.main.data.local.MainLocalImpl
 import com.demo.rentaldemo.ui.feature.main.data.model.CategoryResponse
+import com.demo.rentaldemo.ui.feature.main.data.model.FavouritesResponse
 import com.demo.rentaldemo.ui.feature.main.data.model.RecentlyUpdatedResponse
 import com.demo.rentaldemo.ui.feature.main.data.remote.MainRemoteImpl
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +38,12 @@ class MainRepositoryImpl constructor(
     override suspend fun getRecentlyUpdatedResponse(): List<RecentlyUpdatedResponse> {
         return withContext(Dispatchers.IO) {
             remoteRepository.getRecentlyUpdatedResponse()
+        }
+    }
+
+    override suspend fun getFavouritesResponse(): List<FavouritesResponse> {
+        return withContext(Dispatchers.IO) {
+            remoteRepository.getFavouritesResponse()
         }
     }
 

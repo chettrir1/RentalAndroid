@@ -4,17 +4,17 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.window.OnBackInvokedDispatcher
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.ActivityMainBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
+import com.demo.rentaldemo.ui.feature.main.landing.add.AddFragment
+import com.demo.rentaldemo.ui.feature.main.landing.favourites.FavouritesFragment
 import com.demo.rentaldemo.ui.feature.main.landing.home.HomeFragment
+import com.demo.rentaldemo.ui.feature.main.landing.profile.ProfileFragment
 
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-
-    private val viewModel: MainViewModel by viewModels()
 
     companion object {
         fun start(activity: Activity) {
@@ -36,6 +36,24 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             when (it.itemId) {
                 R.id.action_home -> {
                     val fragment = HomeFragment.getInstance()
+                    addFragment(fragment)
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.action_favourite -> {
+                    val fragment = FavouritesFragment.getInstance()
+                    addFragment(fragment)
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.action_add -> {
+                    val fragment = AddFragment.getInstance()
+                    addFragment(fragment)
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.action_profile -> {
+                    val fragment = ProfileFragment.getInstance()
                     addFragment(fragment)
                     return@setOnItemSelectedListener true
                 }

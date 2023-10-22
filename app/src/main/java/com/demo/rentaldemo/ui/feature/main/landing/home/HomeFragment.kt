@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.FragmentHomeBinding
 import com.demo.rentaldemo.ui.base.BaseFragment
-import com.demo.rentaldemo.ui.feature.main.landing.CategoriesAdapter
 import com.demo.rentaldemo.ui.feature.main.landing.MainViewModel
-import com.demo.rentaldemo.ui.feature.main.landing.RecentlyUpdatedAdapter
 import com.demo.rentaldemo.ui.utils.Status
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {

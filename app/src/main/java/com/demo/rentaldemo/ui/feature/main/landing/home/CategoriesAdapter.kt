@@ -1,4 +1,4 @@
-package com.demo.rentaldemo.ui.feature.main.landing
+package com.demo.rentaldemo.ui.feature.main.landing.home
 
 import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide

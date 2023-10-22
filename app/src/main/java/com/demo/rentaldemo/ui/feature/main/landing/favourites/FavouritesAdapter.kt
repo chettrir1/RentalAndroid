@@ -1,22 +1,22 @@
-package com.demo.rentaldemo.ui.feature.main.landing
+package com.demo.rentaldemo.ui.feature.main.landing.favourites
 
 import androidx.core.content.ContextCompat
 import androidx.databinding.ViewDataBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.demo.rentaldemo.R
-import com.demo.rentaldemo.databinding.ItemRecentlyUpdatedBinding
+import com.demo.rentaldemo.databinding.ItemFavouritesBinding
 import com.demo.rentaldemo.ui.base.BaseAdapter
 import com.demo.rentaldemo.ui.base.BaseViewHolder
-import com.demo.rentaldemo.ui.feature.main.data.model.RecentlyUpdatedResponse
+import com.demo.rentaldemo.ui.feature.main.data.model.FavouritesResponse
 
-class RecentlyUpdatedAdapter(
-    private var dataList: MutableList<RecentlyUpdatedResponse>,
-    private val onItemSelectedListener: (RecentlyUpdatedResponse) -> Unit
-) : BaseAdapter<RecentlyUpdatedResponse, RecentlyUpdatedAdapter.RecentlyUpdatedViewHolder>() {
+class FavouritesAdapter(
+    private var dataList: MutableList<FavouritesResponse>,
+    private val onItemSelectedListener: (FavouritesResponse) -> Unit
+) : BaseAdapter<FavouritesResponse, FavouritesAdapter.RecentlyUpdatedViewHolder>() {
 
     override fun getViewHolder(binding: ViewDataBinding, viewType: Int): RecentlyUpdatedViewHolder {
-        return RecentlyUpdatedViewHolder(binding as ItemRecentlyUpdatedBinding)
+        return RecentlyUpdatedViewHolder(binding as ItemFavouritesBinding)
     }
 
     override fun onBindCustomViewHolder(holder: RecentlyUpdatedViewHolder, position: Int) {
@@ -24,26 +24,26 @@ class RecentlyUpdatedAdapter(
     }
 
     override fun getLayoutResource(viewType: Int): Int {
-        return R.layout.item_recently_updated
+        return R.layout.item_favourites
     }
 
     override fun getItemCount(): Int {
         return dataList.size
     }
 
-    fun updateData(list: MutableList<RecentlyUpdatedResponse>) {
+    fun updateData(list: MutableList<FavouritesResponse>) {
         this.dataList = list
     }
 
-    inner class RecentlyUpdatedViewHolder(private var binding: ItemRecentlyUpdatedBinding) :
-        BaseViewHolder<RecentlyUpdatedResponse>(binding) {
-        override fun bindView(obj: RecentlyUpdatedResponse) {
+    inner class RecentlyUpdatedViewHolder(private var binding: ItemFavouritesBinding) :
+        BaseViewHolder<FavouritesResponse>(binding) {
+        override fun bindView(obj: FavouritesResponse) {
             super.bindView(obj)
             binding.tvTitle.text = obj.title
             Glide.with(binding.root.context)
                 .load(obj.image)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.ic_logo).into(binding.ivRecentlyUpdated)
+                .placeholder(R.drawable.ic_logo).into(binding.ivFavourites)
 
             binding.tvPer.text = "/ ${obj.price_type}"
             binding.tvAddress.text = obj.address
@@ -75,7 +75,7 @@ class RecentlyUpdatedAdapter(
             }
 
 
-            binding.cvRecentlyUpdated.setOnClickListener {
+            binding.cvFavourites.setOnClickListener {
                 onItemSelectedListener(obj)
             }
         }
