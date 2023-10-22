@@ -38,7 +38,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Rent" />
+                    android:text="@string/rent" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_easy"
@@ -54,7 +54,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/tv_rent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Easy" />
+                    android:text="@string/easy" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_notification"

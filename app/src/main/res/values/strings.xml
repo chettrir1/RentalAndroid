@@ -31,4 +31,6 @@
     <string name="nav_history">History</string>
     <string name="nav_profile">Profile</string>
     <string name="your_new_post">Your new Post</string>
+    <string name="rent">Rent</string>
+    <string name="easy">Easy</string>
 </resources>
