@@ -160,7 +160,7 @@
                     android:id="@+id/cv_user"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:clipToPadding="false"
+                    android:clipToPadding="false"etail
                     app:cardBackgroundColor="#FFFFFF"
                     app:cardCornerRadius="@dimen/spacing_20"
                     app:cardElevation="2dp"
