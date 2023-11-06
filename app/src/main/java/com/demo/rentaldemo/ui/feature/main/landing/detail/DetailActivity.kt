@@ -31,7 +31,6 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>() {
         super.onCreate(savedInstanceState)
         viewModel.getHomeFacilitiesResponse()
         viewModel.getNearPublicFacilitiesResponse()
-
     }
 
     override fun initObservers() {
