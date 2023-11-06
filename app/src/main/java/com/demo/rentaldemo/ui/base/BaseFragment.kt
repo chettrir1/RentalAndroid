@@ -9,7 +9,6 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 
 abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
-
     abstract fun layout(): Int
 
     lateinit var binding: T

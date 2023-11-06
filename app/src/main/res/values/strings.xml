@@ -33,4 +33,9 @@
     <string name="your_new_post">Your new Post</string>
     <string name="rent">Rent</string>
     <string name="easy">Easy</string>
+    <string name="home_facilities">Home Facilities</string>
+    <string name="near_public_facilities">Near Public Facilities</string>
+    <string name="description">Description</string>
+    <string name="description_message">This is a beautiful and cozy home which would be perfect for those who are searching for small yet environment friendly place.\n\nThis home is  equipped with Washing Machine, Electric Stove, Microwave, Refrigerator, Cutlery.</string>
+    <string name="proceed_for_payment">Proceed for Payment</string>
 </resources>

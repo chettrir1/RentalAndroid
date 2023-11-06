@@ -41,6 +41,10 @@
         <activity
             android:name=".ui.feature.main.landing.MainActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".ui.feature.main.landing.detail.DetailActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
