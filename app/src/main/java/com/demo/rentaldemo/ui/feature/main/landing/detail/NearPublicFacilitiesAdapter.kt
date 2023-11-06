@@ -44,6 +44,7 @@ class NearPublicFacilitiesAdapter(
         override fun bindView(obj: NearPublicFacilitiesResponse) {
             super.bindView(obj)
             binding.tvNearPublicFacilities.text = obj.title
+            binding.tvDistance.text = obj.distance
             Glide.with(binding.root.context)
                 .load(
                     getImage(

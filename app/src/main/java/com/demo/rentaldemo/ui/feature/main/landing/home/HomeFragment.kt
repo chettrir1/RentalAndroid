@@ -9,6 +9,7 @@ import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.FragmentHomeBinding
 import com.demo.rentaldemo.ui.base.BaseFragment
 import com.demo.rentaldemo.ui.feature.main.landing.MainViewModel
+import com.demo.rentaldemo.ui.feature.main.landing.detail.DetailActivity
 import com.demo.rentaldemo.ui.utils.Status
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -74,7 +75,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
                 Status.COMPLETE -> {
                     response.data?.let {
-                        rAdapter = RecentlyUpdatedAdapter(it.toMutableList()) { response -> }
+                        rAdapter = RecentlyUpdatedAdapter(it.toMutableList()) { response ->
+                            DetailActivity.start(requireActivity())
+                        }
                         binding.rvRecentlyUpdated.adapter = rAdapter
                     }
                 }

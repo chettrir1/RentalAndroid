@@ -4,7 +4,8 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.demo.rentaldemo.R
 import com.demo.rentaldemo.databinding.ActivityDetailBinding
 import com.demo.rentaldemo.ui.base.BaseActivity
@@ -21,7 +22,6 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>() {
         fun start(activity: Activity) {
             val intent = Intent(activity, DetailActivity::class.java)
             activity.startActivity(intent)
-            activity.finish()
         }
     }
 
@@ -29,8 +29,16 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding.ivBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+        Glide.with(binding.root.context)
+            .load("https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I")
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .placeholder(R.drawable.logo).into(binding.ivDetail)
         viewModel.getHomeFacilitiesResponse()
         viewModel.getNearPublicFacilitiesResponse()
+
     }
 
     override fun initObservers() {
@@ -47,13 +55,7 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>() {
 
                 Status.COMPLETE -> {
                     response.data?.let {
-                        val layoutManager = LinearLayoutManager(
-                            this,
-                            LinearLayoutManager.HORIZONTAL,
-                            false
-                        )
                         adapter = HomeFacilitiesAdapter(it.toMutableList())
-                        binding.rvHomeFacilities.layoutManager = layoutManager
                         binding.rvHomeFacilities.adapter = adapter
                     }
                 }
@@ -75,7 +77,7 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>() {
                 Status.COMPLETE -> {
                     response.data?.let {
                         nAdapter = NearPublicFacilitiesAdapter(it.toMutableList())
-                        binding.rvNearestFacilities.adapter = adapter
+                        binding.rvNearestFacilities.adapter = nAdapter
                     }
                 }
 
