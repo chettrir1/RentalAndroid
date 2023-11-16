@@ -77,6 +77,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("com.github.Spikeysanju:MotionToast:1.4")
 
 
     testImplementation("junit:junit:4.13.2")

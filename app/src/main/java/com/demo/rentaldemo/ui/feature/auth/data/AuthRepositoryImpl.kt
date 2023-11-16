@@ -1,13 +1,15 @@
 package com.demo.rentaldemo.ui.feature.auth.data
 
 import com.demo.rentaldemo.ui.feature.auth.data.local.AuthLocalImpl
+import com.demo.rentaldemo.ui.feature.auth.data.model.CreateUserResponse
+import com.demo.rentaldemo.ui.feature.auth.data.model.LoginResponse
 import com.demo.rentaldemo.ui.feature.auth.data.remote.AuthRemoteImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class AuthRepositoryImpl constructor(
     private val localRepository: AuthRepository.Local,
-    private val remoteRepository: AuthRepository.Remote
+    private val remoteRepository: AuthRepository.Remote,
 ) : AuthRepository {
 
     companion object {
@@ -29,6 +31,24 @@ class AuthRepositoryImpl constructor(
     override suspend fun getData(): String {
         return withContext(Dispatchers.IO) {
             ""
+        }
+    }
+
+    override suspend fun createUser(
+        firstName: String,
+        lastName: String,
+        email: String,
+        phone: String,
+        password: String,
+    ): CreateUserResponse {
+        return withContext(Dispatchers.IO) {
+            remoteRepository.createUser(firstName, lastName, email, phone, password)
+        }
+    }
+
+    override suspend fun authenticateUser(email: String, password: String): LoginResponse {
+        return withContext(Dispatchers.IO) {
+            remoteRepository.authenticateUser(email, password)
         }
     }
 
