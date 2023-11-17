@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -281,7 +282,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/til_description"
                     app:layout_constraintStart_toStartOf="@+id/til_description"
                     app:layout_constraintTop_toBottomOf="@+id/til_description" />
-                
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_add_property_image"
                     android:layout_width="55dp"
@@ -294,6 +295,17 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_property_pictures"
                     app:srcCompat="@drawable/ic_plain_add"
                     app:tint="@color/colorMain" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_property_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_add_property_image"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_property_pictures"
+                    app:layout_constraintStart_toEndOf="@+id/iv_add_property_image"
+                    app:layout_constraintTop_toTopOf="@id/iv_add_property_image"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_property_image" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
